@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9dd8dc1-a987-4398-8e42-0370f0821e24" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1TRswB4daOn6aKFQ2CHZaJGOW3D" />
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.11820328" />
+    <property name="project.structure.side.proportion" value="0.33415234" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.GameViewTest.testInteract">
+    <configuration name="All in DraughtsRefactoring2 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DraughtsRefactoring2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in DraughtsRefactoring2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DraughtsRefactoring2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameViewTest.testInteract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DraughtsRefactoring2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="es.urjccode.mastercloudapps.adcs.draughts.views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="es.urjccode.mastercloudapps.adcs.draughts.views" />
+      <option name="MAIN_CLASS_NAME" value="es.urjccode.mastercloudapps.adcs.draughts.views.GameViewTest" />
+      <option name="METHOD_NAME" value="testInteract" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.GameViewTest.testInteract" />
+        <item itemvalue="JUnit.All in DraughtsRefactoring2 (1)" />
+        <item itemvalue="JUnit.All in DraughtsRefactoring2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9dd8dc1-a987-4398-8e42-0370f0821e24" name="Default Changelist" comment="" />
+      <created>1573434478226</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573434478226</updated>
+    </task>
+    <servers />
+  </component>
+</project>
