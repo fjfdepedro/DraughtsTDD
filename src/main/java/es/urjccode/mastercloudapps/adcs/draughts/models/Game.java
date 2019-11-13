@@ -38,6 +38,11 @@ public class Game {
 
 	public Error move(Coordinate origin, Coordinate target) {
 		assert origin != null && target != null;
+		
+		return handleError(origin, target);
+	}
+
+	private Error handleError(Coordinate origin, Coordinate target) {
 		if (!origin.isValid() || !target.isValid()) {
 			return Error.OUT_COORDINATE;
 		}
@@ -51,13 +56,16 @@ public class Game {
 		if (!origin.isDiagonal(target)) {
 			return Error.NOT_DIAGONAL;
 		}
+
 		Piece piece = this.board.getPiece(origin);
 		if (!piece.isAdvanced(origin, target)) {
 			return Error.NOT_ADVANCED;
 		}
+
 		if (origin.diagonalDistance(target) >= 3) {
 			return Error.BAD_DISTANCE;
 		}
+
 		if (!this.board.isEmpty(target)) {
 			return Error.NOT_EMPTY_TARGET;
 		}
