@@ -19,7 +19,7 @@ public class CommandView extends SubView {
             String command = this.console.readString(Message.MOVE_IT.getMessage() + color + ": ");
             int origin = Integer.parseInt(command.substring(0, 2));
             int target = Integer.parseInt(command.substring(3, 5));
-            error = playController.move(new Coordinate(originCoordinateRow(origin), originCoordinateColumn(origin)), new Coordinate(originCoordinateRow(target), originCoordinateColumn(target)));
+            playController.move(new Coordinate(originCoordinateRow(origin), originCoordinateColumn(origin)), new Coordinate(originCoordinateRow(target), originCoordinateColumn(target)));
             if (error != null){
                 console.writeln(Message.ERROR.getMessage() + error.name());
             gameView.write(playController);

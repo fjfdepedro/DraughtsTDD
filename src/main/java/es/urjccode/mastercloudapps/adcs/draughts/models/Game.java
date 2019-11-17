@@ -118,4 +118,16 @@ public class Game {
 		return this.board.getDimension();
 	}
 
+	public Error isCorrect(Coordinate origin, Coordinate target) {
+		assert origin != null;
+		assert target != null;
+		if (board.isEmpty(origin)) {
+			return Error.EMPTY_ORIGIN;
+		}
+		if (this.turn.getColor() != this.board.getColor(origin)) {
+			return Error.OPPOSITE_PIECE;
+		}
+		return this.board.getPiece(origin).isCorrect(origin, target, board);
+	}
+
 }
