@@ -54,7 +54,7 @@ public class Game {
 		this.turn.change();
 	}
 
-	private Error handleError(Coordinate origin, Coordinate target) {
+	Error handleError(Coordinate origin, Coordinate target) {
 		if (!origin.isValid() || !target.isValid()) {
 			return Error.OUT_COORDINATE;
 		}
