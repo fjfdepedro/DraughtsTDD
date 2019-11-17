@@ -35,7 +35,7 @@ public class CommandViewTest {
     
     @Test
     public void testInteract(){
-        when(playController.getColor()).thenReturn(Color.BLACK);
+        when(playController.getColor()).thenReturn(Color.BLACK.getColorName());
         when(console.readString("Mueven las negras: ")).thenReturn("32.41\n");
         commandView.interact(playController);
         verify(playController).move(new Coordinate(2,1), new Coordinate(3, 0));
