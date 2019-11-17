@@ -1,7 +1,9 @@
 package es.urjccode.mastercloudapps.adcs.draughts.models;
 
 public enum Message {
-    LOSE_THE_GAME("Derrota!!! No puedes mover tus fichas!!!");
+    LOSE_THE_GAME("Derrota!!! No puedes mover tus fichas!!!"),
+    ASK_PLAY_AGAIN("¿Queréis jugar otra"),
+    TITLE("Draughts");
 
     private String message;
 
