@@ -1,25 +1,15 @@
 package es.urjccode.mastercloudapps.adcs.draughts.models;
 
-public class Piece {
+public class Pawn extends Piece {
+
+	Pawn(Color color) {
+		super(color);
+	}
 
 	private Color color;
 
-	Piece(Color color){
-		this.color = color;
-	}
-
 	public Color getColor() {
 		return this.color;
-	}
-
-	Error isCorrect(Coordinate origin, Coordinate target, PieceProvider pieceProvider) {
-		if (!origin.isDiagonal(target)) {
-			return Error.NOT_DIAGONAL;
-		}
-		if (!pieceProvider.isEmpty(target)) {
-			return Error.NOT_EMPTY_TARGET;
-		}
-		return null;
 	}
 
 	boolean isLimit(Coordinate coordinate){
