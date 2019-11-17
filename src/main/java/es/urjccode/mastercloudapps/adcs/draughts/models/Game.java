@@ -24,7 +24,7 @@ public class Game {
 		}
 	}
 
-	private Piece getInitialPiece(Coordinate coordinate) {
+	public Piece getInitialPiece(Coordinate coordinate) {
 		if (coordinate.isBlack()) {
 			final int row = coordinate.getRow();
 			Color color = null;
@@ -40,10 +40,18 @@ public class Game {
 		return null;
 	}
 
-	public Error move(Coordinate origin, Coordinate target) {
-		assert origin != null && target != null;
-		
-		return handleError(origin, target);
+	public void move(Coordinate origin, Coordinate target) {
+		assert this.handleError(origin, target) == null;
+	
+		if (origin.diagonalDistance(target) == 2) {
+			this.board.remove(origin.betweenDiagonal(target));
+		}
+		this.board.move(origin, target);
+		if (this.board.getPiece(target).isLimit(target)){
+			this.board.remove(target);
+			this.board.put(target, new Draught(Color.WHITE));
+		}
+		this.turn.change();
 	}
 
 	private Error handleError(Coordinate origin, Coordinate target) {
