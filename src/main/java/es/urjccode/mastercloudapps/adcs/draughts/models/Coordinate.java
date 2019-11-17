@@ -75,10 +75,24 @@ public class Coordinate {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
-        if (obj == null)
-            return false;
+
         if (getClass() != obj.getClass())
             return false;
+        
+
+        boolean errorNull = handleErrorNull(obj);
+        boolean errorCoordinate = handleErrorCoordinate(obj);
+
+        return errorNull && errorCoordinate;
+    }
+
+    private boolean handleErrorNull(Object obj){
+        if (obj == null)
+            return false;
+        return true;
+    }
+
+    private boolean handleErrorCoordinate(Object obj){
         Coordinate other = (Coordinate) obj;
         if (column != other.column)
             return false;
