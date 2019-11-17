@@ -16,12 +16,12 @@ public class CommandView extends SubView {
         Error error = null;
         GameView gameView = new GameView();
         do {
-            String command = this.console.readString("Mueven las " + color + ": ");
+            String command = this.console.readString(Message.MOVE_IT.getMessage() + color + ": ");
             int origin = Integer.parseInt(command.substring(0, 2));
             int target = Integer.parseInt(command.substring(3, 5));
-            error = playController.move(new Coordinate(origin/10-1, origin%10-1), new Coordinate(target/10-1, target%10-1));
+            error = playController.move(new Coordinate(originCoordinateRow(origin), originCoordinateColumn(origin)), new Coordinate(originCoordinateRow(target), originCoordinateColumn(target)));
             if (error != null){
-                console.writeln("Error!!!" + error.name());
+                console.writeln(Message.ERROR.getMessage() + error.name());
             gameView.write(playController);
             }
         } while (error != null); 
@@ -29,5 +29,14 @@ public class CommandView extends SubView {
             this.console.write(Message.LOSE_THE_GAME.getMessage());
         }
     }
+
+    private int originCoordinateRow(int row) {
+        return row/10-1;
+    }
+
+    private int originCoordinateColumn(int column) {
+        return column%10-1;
+    }
+
 
 }
