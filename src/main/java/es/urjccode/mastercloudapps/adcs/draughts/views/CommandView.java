@@ -2,13 +2,12 @@ package es.urjccode.mastercloudapps.adcs.draughts.views;
 
 import es.urjccode.mastercloudapps.adcs.draughts.controllers.PlayController;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Error;
+import es.urjccode.mastercloudapps.adcs.draughts.models.Message;
 import es.urjccode.mastercloudapps.adcs.draughts.models.Coordinate;
 
 public class CommandView extends SubView {
 
     private static final String[] COLORS = {"blancas", "negras"};
-
-    private static final String MESSAGE = "Derrota!!! No puedes mover tus fichas!!!";
 
     public CommandView(){
         super();
@@ -29,7 +28,7 @@ public class CommandView extends SubView {
             }
         } while (error != null); 
         if (playController.isBlocked()){
-            this.console.write(CommandView.MESSAGE);
+            this.console.write(Message.LOSE_THE_GAME.getMessage());
         }
     }
 
