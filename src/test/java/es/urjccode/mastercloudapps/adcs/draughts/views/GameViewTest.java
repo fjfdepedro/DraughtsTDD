@@ -1,7 +1,8 @@
 package es.urjccode.mastercloudapps.adcs.draughts.views;
 
 import es.urjccode.mastercloudapps.adcs.draughts.controllers.StartController;
-import es.urjccode.mastercloudapps.adcs.draughts.models.Session;
+import es.urjccode.mastercloudapps.adcs.draughts.models.Game;
+import es.urjccode.mastercloudapps.adcs.draughts.models.State;
 import es.urjccode.mastercloudapps.adcs.draughts.utils.Console;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,7 +37,9 @@ public class GameViewTest {
     
     @Test
     public void testInteract(){
-        StartController startController = new StartController(new Session());
+        Game game = new Game();
+        State state = new State();
+        StartController startController = new StartController(game, state);
         this.gameView.write(startController);
         verify(console, times(90)).write(argument.capture());
         List<String> rows = Arrays.asList(
