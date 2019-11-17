@@ -6,6 +6,10 @@ public class Game {
 
 	private Turn turn;
 
+	private static Integer ROW_BLACK = 2;
+	private static Integer ROW_WHITE = 5;
+	private static Integer DIAGONAL_MOVE_EAT = 2;
+
 	public Game() {
 		this.turn = new Turn();
 		this.board = new Board();
@@ -24,9 +28,9 @@ public class Game {
 		if (coordinate.isBlack()) {
 			final int row = coordinate.getRow();
 			Color color = null;
-			if (row <= 2) {
+			if (row <= ROW_BLACK) {
 				color = Color.BLACK;
-			} else if (row >= 5) {
+			} else if (row >= ROW_WHITE) {
 				color = Color.WHITE;
 			}
 			if (color != null) {
@@ -69,7 +73,7 @@ public class Game {
 		if (!this.board.isEmpty(target)) {
 			return Error.NOT_EMPTY_TARGET;
 		}
-		if (origin.diagonalDistance(target) == 2) {
+		if (origin.diagonalDistance(target) == DIAGONAL_MOVE_EAT) {
 			Coordinate between = origin.betweenDiagonal(target);
 			if (this.board.getPiece(between) == null) {
 				return Error.EATING_EMPTY;
